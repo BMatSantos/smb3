@@ -1,7 +1,21 @@
-# smb3
-Disassembly of Super Mario Bros 3 for ASM6
+# Super Mario 3 - Tradução PT-BR
 
-Fork of Captah Southbird's disassembly (https://github.com/captainsouthbird/smb3)
+Projeto de fã-tradução de Super Mario Bros. 3 (Super Irmãos Mario 3). A maioria dos gráficos foi feita por Kosmus.
+
+Você pode conferir quais os códigos alterados pesquisando por **[BR]**.
+
+-------------
+
+Para assemblar, é só executar no prompt:
+
+asm6 smb3.asm
+
+
+# Super Mario 3 - PT-BR Translation
+
+Fan translation project of Super Mario Bros. 3. Most of the graphics were done by Kosmus.
+
+You can check which codes were changed by searching for **[BR]**.
 
 -------------
 
