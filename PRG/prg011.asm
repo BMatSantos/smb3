@@ -2586,6 +2586,7 @@ PRG011_AE0B:
     .word Map_Object_Stationary ; World 8 Tank
     .word Map_Object_Stationary ; World 8 Airship
     .word Map_Object_Canoe      ; Canoe
+    .word PRG011_ADF4       ; [BR] HELP 2 (Just RTS)
 
     ; Based on march travel direction, these are the movements
 Map_Object_Travel_Y:    .byte 0, 0, 1, -1
@@ -3565,6 +3566,7 @@ MapObject_Pat1:
     .byte $E5, $E5, $E9 ; 0E=World 8 Tank
     .byte $FD, $FD, $1B ; 0F=World 8 Airship
     .byte $00, $71, $75 ; 10=Canoe
+    .byte $00, $49, $23 ; [BR] 11=HELP 2
 
 MapObject_Pat2:
     .byte $00, $49, $2B ; 01=HELP
@@ -3583,6 +3585,7 @@ MapObject_Pat2:
     .byte $E7, $E7, $EB ; 0E=World 8 Tank
     .byte $FF, $FF, $BB ; 0F=World 8 Airship
     .byte $00, $73, $77 ; 10=Canoe
+    .byte $00, $49, $25 ; [BR] 11=HELP 2
 
 MapObject_Attr1:
     .byte $00, $03, $03 ; 01=HELP
@@ -3601,6 +3604,7 @@ MapObject_Attr1:
     .byte $02, $02, $02 ; 0E=World 8 Tank
     .byte $01, $01, $01 ; 0F=World 8 Airship
     .byte $00, $02, $02 ; 10=Canoe
+    .byte $00, $03, $03 ; [BR] 11=HELP 2
 
 MapObject_Attr2:
     .byte $00, $03, $03 ; 01=HELP
@@ -3619,6 +3623,7 @@ MapObject_Attr2:
     .byte $02, $02, $02 ; 0E=World 8 Tank
     .byte $01, $01, $01 ; 0F=World 8 Airship
     .byte $00, $02, $02 ; 10=Canoe
+    .byte $00, $03, $03 ; [BR] 11=HELP 2
 
     ; This is a rotated array of Sprite_RAM offsets, helps distribute
     ; the map object display so even if there's scanline overflows,
@@ -3733,6 +3738,12 @@ PRG011_B599:
     .word MapObj_DrawAndEnter   ; 0E=World 8 Tank
     .word MapObj_DrawAndEnter   ; 0F=World 8 Airship
     .word MapObj_DrawAndEnter   ; 10=Canoe
+    .word MapObj_DrawAndEnter   ; [BR] 11=HELP 2
+
+;[BR]
+Help_2_Offset:
+    LDA #$F0 ; A = -16 (2nd HELP offset)
+    JMP Continue_B5C9
 
 MapObj_DrawAndEnter:
     LDA #$00     ; A = 0 (no offset on map sprite)
@@ -3744,6 +3755,11 @@ MapObj_DrawAndEnter:
     LDA #$07     ; Otherwise, A = 7 (Canoe offset 7)
 
 PRG011_B5C9:
+    ;[BR] If this is 2nd HELP bubble, jump back to Help_2_Offset
+    CPY #MAPOBJ_HELP_2
+    BEQ Help_2_Offset
+
+Continue_B5C9:
     LDY Temp_Var6       ; Y = Temp_Var6 (Sprite_RAM offset)
 
     ; Set Y for map object sprite
@@ -3772,16 +3788,21 @@ PRG011_B5C9:
     LDX #%00001000   ; X = 8 (masking value against Counter_1 for animation)
 
     CMP #MAPOBJ_CANOE
-    BGE PRG011_B60A  ; If this is a canoe (or greater??), jump to PRG011_B60A
+    BEQ PRG011_B60A  ; If this is a canoe [BR], jump to PRG011_B60A
 
     CMP #MAPOBJ_HELP
     BNE PRG011_B5FA  ; If this NOT the HELP bubble, jump to PRG011_B5FA
 
+HelpSpeed:
     LDX #%00110000   ; X = $30 (masking value against Counter_1 for animation)
     JMP PRG011_B60A  ; Jump to PRG011_B60A
 
 PRG011_B5FA:
     ; HELP bubble only
+
+    ;[BR] If this is the 2nd HELP bubble, jump back to HelpSpeed
+    CMP #MAPOBJ_HELP_2
+    BEQ HelpSpeed
 
     LDA Map_Operation
     CMP #$0b
@@ -3821,11 +3842,14 @@ PRG011_B60A:
     CPX #MAPOBJ_BATTLESHIP * 3
     BLT PRG011_B623  ; If ID < MAPOBJ_BATTLESHIP (Not a World 8 Tank / Battleship / Airship), jump to PRG011_B623
 
+    CPX #MAPOBJ_HELP_2 * 3
+    BEQ PRG011_B628  ; If ID = MAPOBJ_HELP_2, jump to PRG011_B628
+
     ; Canoe was technically already eliminated, but it checks again anyway
     ; In any case, one of the World 8 battle implements
 
-    CPX #MAPOBJ_CANOE * 3
-    BLT PRG011_B628  ; Otherwise, jump to PRG011_B628
+    ;CPX #MAPOBJ_CANOE * 3
+    ;BLT PRG011_B628  ; Otherwise, jump to PRG011_B628
 
 PRG011_B623:
 
@@ -3864,6 +3888,10 @@ PRG011_B630:
 
     CMP #MAPOBJ_HELP
     BEQ PRG011_B657  ; If this is the HELP bubble, jump to PRG011_B657 (RTS)
+
+    ; [BR]
+    CMP #MAPOBJ_HELP_2
+    BEQ PRG011_B657  ; If this is the 2nd HELP bubble, jump to PRG011_B657 (RTS)
 
     CMP #MAPOBJ_CANOE
     BLT PRG011_B658  ; If this is not the canoe, jump to PRG011_B658

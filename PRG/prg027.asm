@@ -444,44 +444,44 @@ PRG027_A272:
 PRG027_A2B3:
     RTS      ; Return
 
-KingText_Typical:
+KingText_Typical: ; [BR]
     ; "Oh,thank heavens!" / "I'm back to my old" / "self again." / "Thank you so much." / "Here is a letter" / "from the Princess."
 
-    ;       O    h    ,    t    h    a    n    k         h    e    a    v    e    n    s    !
-    .byte $BE, $D7, $9A, $CD, $D7, $D0, $DD, $DA, $FE, $D7, $D4, $D0, $CF, $D4, $DD, $CC, $EA, $FE, $FE, $FE
+    ;       E    s    p    l    ê    n    d    i    d    o    !
+    .byte $B4, $CC, $DF, $DB, $DA, $DD, $D3, $D8, $D3, $DE, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
-    ;       I    '    m         b    a    c    k         t    o         m    y         o    l    d
-    .byte $B8, $AB, $DC, $FE, $D1, $D0, $D2, $DA, $FE, $CD, $DE, $FE, $DC, $8C, $FE, $DE, $DB, $D3, $FE, $FE
+    ;       R    e    t    o    r    n    e    i         à         m    i    n    h    a          
+    .byte $C1, $D4, $CD, $DE, $CB, $DD, $D4, $D8, $FE, $8C, $FE, $DC, $D8, $DD, $D7, $D0, $FE, $FE, $FE, $FE
 
-    ;       s    e    l    f         a    g    a    i    n    .
-    .byte $CC, $D4, $DB, $D5, $FE, $D0, $D6, $D0, $D8, $DD, $E9, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       f    o    r    m    a         o    r    i    g    i    n    a    l    .
+    .byte $D5, $DE, $CB, $DC, $D0, $FE, $DE, $CB, $D8, $D6, $D8, $DD, $D0, $DB, $E9, $FE, $FE, $FE, $FE, $FE
 
-    ;       T    h    a    n    k         y    o    u         s    o         m    u    c    h    .
-    .byte $C3, $D7, $D0, $DD, $DA, $FE, $8C, $DE, $CE, $FE, $CC, $DE, $FE, $DC, $CE, $D2, $D7, $E9, $FE, $FE
+    ;       M    u    i    t    o         o    b    r    i    g    a    d    o    .
+    .byte $BC, $CE, $D8, $CD, $DE, $FE, $DE, $D1, $CB, $D8, $D6, $D0, $D3, $DE, $E9, $FE, $FE, $FE, $FE, $FE
 
-    ;       H    e    r    e         i    s         a         l    e    t    t    e    r
-    .byte $B7, $D4, $CB, $D4, $FE, $D8, $CC, $FE, $D0, $FE, $DB, $D4, $CD, $CD, $D4, $CB, $FE, $FE, $FE, $FE
+    ;       E    i    s         a    q    u    i         u    m    a         c    a    r    t    a
+    .byte $B4, $D8, $CC, $FE, $D0, $CA, $CE, $D8, $FE, $CE, $DC, $D0, $FE, $D2, $D0, $CB, $CD, $D0, $FE, $FE
 
-    ;       f    r    o    m         t    h    e         P    r    i    n    c    e    s    s    .
-    .byte $D5, $CB, $DE, $DC, $FE, $CD, $D7, $D4, $FE, $BF, $CB, $D8, $DD, $D2, $D4, $CC, $CC, $E9, $FE, $FE
+    ;       d    a         p    r    i    n    c    e    s    a    .
+    .byte $D3, $D0, $FE, $DF, $CB, $D8, $DD, $D2, $D4, $CC, $D0, $E9, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
 KingText_Frog:
     ; "Oh me,oh my!" / "You've been" / "transformed!" / "Shall I change you" / "back with this wand?"
 
-    ;       O    h         m    e    ,    o    h         m    y    !
-    .byte $BE, $D7, $FE, $DC, $D4, $9A, $DE, $D7, $FE, $DC, $8C, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       M    i    n    h    a         n    o    s    s    a    !
+    .byte $BC, $D8, $DD, $D7, $D0, $FE, $DD, $DE, $CC, $CC, $D0, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
-    ;       Y    o    u    '    v    e         b    e    e    n
-    .byte $C8, $DE, $CE, $AB, $CF, $D4, $FE, $D1, $D4, $D4, $DD, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       T    r    a    n    s    f    o    r    m    a    r    a    m         v    o    c    ê    !
+    .byte $C3, $CB, $D0, $DD, $CC, $D5, $DE, $CB, $DC, $D0, $CB, $D0, $DC, $FE, $CF, $DE, $D2, $DA, $EA, $FE
 
-    ;       t    r    a    n    s    f    o    r    m    e    d    !
-    .byte $CD, $CB, $D0, $DD, $CC, $D5, $DE, $CB, $DC, $D4, $D3, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;
+    .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
-    ;       S    h    a    l    l         I         c    h    a    n    g    e         y    o    u
-    .byte $C2, $D7, $D0, $DB, $DB, $FE, $B8, $FE, $D2, $D7, $D0, $DD, $D6, $D4, $FE, $8C, $DE, $CE, $FE, $FE
+    ;       D    e    v    o         t    e         a    j    u    d    a    r         c    o    m
+    .byte $B3, $D4, $CF, $DE, $FE, $CD, $D4, $FE, $D0, $D9, $CE, $D3, $D0, $CB, $FE, $D2, $DE, $DC, $FE, $FE
 
-    ;       b    a    c    k         w    i    t    h         t    h    i    s         w    a    n    d    ?
-    .byte $D1, $D0, $D2, $DA, $FE, $81, $D8, $CD, $D7, $FE, $CD, $D7, $D8, $CC, $FE, $81, $D0, $DD, $D3, $EB
+    ;       e    s    t    a         v    a    r    i    n    h    a    ?
+    .byte $D4, $CC, $CD, $D0, $FE, $CF, $D0, $CB, $D8, $DD, $D7, $D0, $EB, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
@@ -489,20 +489,20 @@ KingText_Frog:
 KingText_Tanooki:
     ; "Thank you,kind" / "raccoon." / "" / "Please tell me your" / "name."
 
-    ;       T    h    a    n    k         y    o    u    ,    k    i    n    d
-    .byte $C3, $D7, $D0, $DD, $DA, $FE, $8C, $DE, $CE, $9A, $DA, $D8, $DD, $D3, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       O    b    r    i    g    a    d    o    ,         g    u    a    x    i    n    i    m
+    .byte $BE, $D1, $CB, $D8, $D6, $D0, $D3, $DE, $9A, $FE, $D6, $CE, $D0, $88, $D8, $DD, $D8, $DC, $FE, $FE
 
-    ;       r    a    c    c    o    o    n    .
-    .byte $CB, $D0, $D2, $D2, $DE, $DE, $DD, $E9, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       b    o    n    d    o    s    o    .
+    .byte $D1, $DE, $DD, $D3, $DE, $CC, $DE, $E9, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
-    ;       P    l    e    a    s    e         t    e    l    l         m    e         y    o    u    r
-    .byte $BF, $DB, $D4, $D0, $CC, $D4, $FE, $CD, $D4, $DB, $DB, $FE, $DC, $D4, $FE, $8C, $DE, $CE, $CB, $FE
+    ;       D    i    g    a    -    m    e    ,         q    u    a    l         é         o
+    .byte $B3, $D8, $D6, $D0, $E5, $DC, $D4, $9A, $FE, $CA, $CE, $D0, $DB, $FE, $C7, $FE, $DE, $FE, $FE, $FE
 
-    ;       n    a    m    e    .
-    .byte $DD, $D0, $DC, $D4, $E9, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       s    e    u         n    o    m    e    ?
+    .byte $CC, $D4, $CE, $FE, $DD, $DE, $DC, $D4, $EB, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
@@ -510,23 +510,23 @@ KingText_Tanooki:
 KingText_Hammer:
     ; "Hey,you!" / "How about lending me" / "your clothes?" / "No dice?!" / "What a drag."
 
-    ;       H    e    y    ,    y    o    u    !
-    .byte $B7, $D4, $8C, $9A, $8C, $DE, $CE, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       E    i    !
+    .byte $B4, $D8, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
-    ;       H    o    w         a    b    o    u    t         l    e    n    d    i    n    g         m    e
-    .byte $B7, $DE, $81, $FE, $D0, $D1, $DE, $CE, $CD, $FE, $DB, $D4, $DD, $D3, $D8, $DD, $D6, $FE, $DC, $D4
+    ;       P    o    d    e    r    i    a         m    e         e    m    p    r    e    s    t    a    r
+    .byte $BF, $DE, $D3, $D4, $CB, $D8, $D0, $FE, $DC, $D4, $FE, $D4, $DC, $DF, $CB, $D4, $CC, $CD, $D0, $CB
 
-    ;       y    o    u    r         c    l    o    t    h    e    s    ?
-    .byte $8C, $DE, $CE, $CB, $FE, $D2, $DB, $DE, $CD, $D7, $D4, $CC, $EB, $FE, $FE, $FE, $FE, $FE, $FE, $FE
-
-    ;       N    o         d    i    c    e    ?    !
-    .byte $BD, $DE, $FE, $D3, $D8, $D2, $D4, $EB, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
-
-    ;       W    h    a    t         a         d    r    a    g    .
-    .byte $C6, $D7, $D0, $CD, $FE, $D0, $FE, $D3, $CB, $D0, $D6, $E9, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       e    s    s    a         r    o    u    p    a    ?
+    .byte $D4, $CC, $CC, $D0, $FE, $CB, $DE, $CE, $DF, $D0, $EB, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+
+    ;       S    e    m         c    h    a    n    c    e    ?    !
+    .byte $C2, $D4, $DC, $FE, $D2, $D7, $D0, $DD, $D2, $D4, $EB, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+
+    ;       Q    u    e         c    o    i    s    a         c    h    a    t    a    .
+    .byte $C0, $CE, $D4, $FE, $D2, $DE, $D8, $CC, $D0, $FE, $D2, $D7, $D0, $CD, $D0, $E9, $FE, $FE, $FE, $FE
 
 DiagText_BySuit_L:
     .byte <KingText_Typical ; Small
@@ -1095,29 +1095,29 @@ Letter_Bodies:
     .word Letter_World6 ; World 6
     .word Letter_World7 ; World 7
 
-Letter_World1:
+Letter_World1: ;[BR]
     ; "If you see any" / "ghosts,be careful." / "They will give chase" / "if you turn away." / "I have enclosed a" / "jewel that helps" / "    protect you."
 
-    ;       I    f         y    o    u         s    e    e         a    n    y
-    .byte $B8, $D5, $FE, $8C, $DE, $CE, $FE, $CC, $D4, $D4, $FE, $D0, $DD, $8C, $00
+    ;       S    e         e    n    c    o    n    t    r    a    r         a    l    g    u    m
+    .byte $C2, $D4, $FE, $D4, $DD, $D2, $DE, $DD, $CD, $CB, $D0, $CB, $FE, $D0, $DB, $D6, $CE, $DC, $00
 
-    ;       g    h    o    s    t    s    ,    b    e         c    a    r    e    f    u    l    .
-    .byte $D6, $D7, $DE, $CC, $CD, $CC, $9A, $D1, $D4, $FE, $D2, $D0, $CB, $D4, $D5, $CE, $DB, $E9, $00
+    ;       f    a    n    t    a    s    m    a    ,         t    e    n    h    a
+    .byte $D5, $D0, $DD, $CD, $D0, $CC, $DC, $D0, $9A, $FE, $CD, $D4, $DD, $D7, $D0, $00
 
-    ;       T    h    e    y         w    i    l    l         g    i    v    e         c    h    a    s    e
-    .byte $C3, $D7, $D4, $8C, $FE, $81, $D8, $DB, $DB, $FE, $D6, $D8, $CF, $D4, $FE, $D2, $D7, $D0, $CC, $D4, $00
+    ;       c    u    i    d    a    d    o    .         E    l    e    s         t    e
+    .byte $D2, $CE, $D8, $D3, $D0, $D3, $DE, $E9, $FE, $B4, $DB, $D4, $CC, $FE, $CD, $D4, $00
 
-    ;       i    f         y    o    u         t    u    r    n         a    w    a    y    .
-    .byte $D8, $D5, $FE, $8C, $DE, $CE, $FE, $CD, $CE, $CB, $DD, $FE, $D0, $81, $D0, $8C, $E9, $00
+    ;       p    e    r    s    e    g    u    i    r    ã    o         q    u    a    n    d    o
+    .byte $DF, $D4, $CB, $CC, $D4, $D6, $CE, $D8, $CB, $9E, $DE, $FE, $CA, $CE, $D0, $DD, $D3, $DE, $00
 
-    ;       I         h    a    v    e         e    n    c    l    o    s    e    d         a
-    .byte $B8, $FE, $D7, $D0, $CF, $D4, $FE, $D4, $DD, $D2, $DB, $DE, $CC, $D4, $D3, $FE, $D0, $00
+    ;       l    h    e    s         d    e    r         a    s         c    o    s    t    a    s    .
+    .byte $DB, $D7, $D4, $CC, $FE, $D3, $D4, $CB, $FE, $D0, $CC, $FE, $D2, $DE, $CC, $CD, $D0, $CC, $E9, $00
 
-    ;       j    e    w    e    l         t    h    a    t         h    e    l    p    s
-    .byte $D9, $D4, $81, $D4, $DB, $FE, $CD, $D7, $D0, $CD, $FE, $D7, $D4, $DB, $DF, $CC, $00
+    ;       E    u         i    n    c    l    u    í         u    m         t    e    s    o    u    r    o
+    .byte $B4, $CE, $FE, $D8, $DD, $D2, $DB, $CE, $C8, $FE, $CE, $DC, $FE, $CD, $D4, $CC, $DE, $CE, $CB, $DE, $00
 
-    ;                           p    r    o    t    e    c    t         y    o    u    .
-    .byte $FE, $FE, $FE, $FE, $DF, $CB, $DE, $CD, $D4, $D2, $CD, $FE, $8C, $DE, $CE, $E9
+    ;       q    u    e         p    o    d    e         a    j    u    d    á    -    l    o    .
+    .byte $CA, $CE, $D4, $FE, $DF, $DE, $D3, $D4, $FE, $D0, $D9, $CE, $D3, $C6, $E5, $DB, $DE, $E9
 
     ; Terminator
     .byte $FF
@@ -1126,23 +1126,23 @@ Letter_World1:
 Letter_World2:
     ; "You can stomp on" / "your enemies using" / "Goomba's shoe." / "I have enclosed a" / "jewel that helps" / "    protect you."
 
-    ;       Y    o    u         c    a    n         s    t    o    m    p         o    n
-    .byte $C8, $DE, $CE, $FE, $D2, $D0, $DD, $FE, $CC, $CD, $DE, $DC, $DF, $FE, $DE, $DD, $00
+    ;       O    s         t    i    j    o    l    o    s         b    r    a    n    c    o    s
+    .byte $BE, $CC, $FE, $CD, $D8, $D9, $DE, $DB, $DE, $CC, $FE, $D1, $CB, $D0, $DD, $D2, $DE, $CC, $00
 
-    ;       y    o    u    r         e    n    e    m    i    e    s         u    s    i    n    g
-    .byte $8C, $DE, $CE, $CB, $FE, $D4, $DD, $D4, $DC, $D8, $D4, $CC, $FE, $CE, $CC, $D8, $DD, $D6, $00
+    ;       c    o    n    t    ê    m         u    m    a         m    a    g    i    a         q    u    e
+    .byte $D2, $DE, $DD, $CD, $DA, $DC, $FE, $CE, $DC, $D0, $FE, $DC, $D0, $D6, $D8, $D0, $FE, $CA, $CE, $D4, $00
 
-    ;       G    o    o    m    b    a    '    s         s    h    o    e    .
-    .byte $B6, $DE, $DE, $DC, $D1, $D0, $AB, $CC, $FE, $CC, $D7, $DE, $D4, $E9, $00
+    ;       l    h    e         p    e    r    m    i    t    e         d    e    r    r    o    t    a    r
+    .byte $DB, $D7, $D4, $FE, $DF, $D4, $CB, $DC, $D8, $CD, $D4, $FE, $D3, $D4, $CB, $CB, $DE, $CD, $D0, $CB, $00
 
-    ;       I         h    a    v    e         e    n    c    l    o    s    e    d         a
-    .byte $B8, $FE, $D7, $D0, $CF, $D4, $FE, $D4, $DD, $D2, $DB, $DE, $CC, $D4, $D3, $FE, $D0, $00
+    ;       s    e    u    s         i    n    i    m    i    g    o    s    .
+    .byte $CC, $D4, $CE, $CC, $FE, $D8, $DD, $D8, $DC, $D8, $D6, $DE, $CC, $E9, $00
 
-    ;       j    e    w    e    l         t    h    a    t         h    e    l    p    s
-    .byte $D9, $D4, $81, $D4, $DB, $FE, $CD, $D7, $D0, $CD, $FE, $D7, $D4, $DB, $DF, $CC, $00
+    ;       E    u         i    n    c    l    u    í         u    m         t    e    s    o    u    r    o
+    .byte $B4, $CE, $FE, $D8, $DD, $D2, $DB, $CE, $C8, $FE, $CE, $DC, $FE, $CD, $D4, $CC, $DE, $CE, $CB, $DE, $00
 
-    ;                           p    r    o    t    e    c    t         y    o    u    .
-    .byte $FE, $FE, $FE, $FE, $DF, $CB, $DE, $CD, $D4, $D2, $CD, $FE, $8C, $DE, $CE, $E9
+    ;       q    u    e         p    o    d    e         a    j    u    d    á    -    l    o    .
+    .byte $CA, $CE, $D4, $FE, $DF, $DE, $D3, $D4, $FE, $D0, $D9, $CE, $D3, $C6, $E5, $DB, $DE, $E9
 
     ; Terminator
     .byte $FF
@@ -1151,29 +1151,23 @@ Letter_World2:
 Letter_World3:
     ; "The white block" / "contains magic" / "powers that will" / "enable you to defeat" / "your enemies." / "I have enclosed a" / "jewel that helps" / "protect you."
 
-    ;       T    h    e         w    h    i    t    e         b    l    o    c    k
-    .byte $C3, $D7, $D4, $FE, $C6, $D7, $D8, $CD, $D4, $FE, $B1, $DB, $DE, $D2, $DA, $00
+    ;       U    s    a    n    d    o         u    m         S    a    p    a    t    o         d    e
+    .byte $C4, $CC, $D0, $DD, $D3, $DE, $FE, $CE, $DC, $FE, $C2, $D0, $DF, $D0, $CD, $DE, $FE, $D3, $D4, $00
 
-    ;       c    o    n    t    a    i    n    s         m    a    g    i    c
-    .byte $D2, $DE, $DD, $CD, $D0, $D8, $DD, $CC, $FE, $DC, $D0, $D6, $D8, $D2, $00
+    ;       G    o    o    m    b    a    ,         v    o    c    ê         p    o    d    e
+    .byte $B6, $DE, $DE, $DC, $D1, $D0, $9A, $FE, $CF, $DE, $D2, $DA, $FE, $DF, $DE, $D3, $D4, $00
 
-    ;       p    o    w    e    r    s         t    h    a    t         w    i    l    l
-    .byte $DF, $DE, $81, $D4, $CB, $CC, $FE, $CD, $D7, $D0, $CD, $FE, $81, $D8, $DB, $DB, $00
+    ;       p    i    s    a    r         e    m         q    u    a    l    q    u    e    r
+    .byte $DF, $D8, $CC, $D0, $CB, $FE, $D4, $DC, $FE, $CA, $CE, $D0, $DB, $CA, $CE, $D4, $CB, $00
 
-    ;       e    n    a    b    l    e         y    o    u         t    o         d    e    f    e    a    t
-    .byte $D4, $DD, $D0, $D1, $DB, $D4, $FE, $8C, $DE, $CE, $FE, $CD, $DE, $FE, $D3, $D4, $D5, $D4, $D0, $CD, $00
+    ;       i    n    i    m    i    g    o    .
+    .byte $D8, $DD, $D8, $DC, $D8, $D6, $DE, $E9, $00
 
-    ;       y    o    u    r         e    n    e    m    i    e    s    .
-    .byte $8C, $DE, $CE, $CB, $FE, $D4, $DD, $D4, $DC, $D8, $D4, $CC, $E9, $00
+    ;       E    u         i    n    c    l    u    í         u    m         t    e    s    o    u    r    o
+    .byte $B4, $CE, $FE, $D8, $DD, $D2, $DB, $CE, $C8, $FE, $CE, $DC, $FE, $CD, $D4, $CC, $DE, $CE, $CB, $DE, $00
 
-    ;       I         h    a    v    e         e    n    c    l    o    s    e    d         a
-    .byte $B8, $FE, $D7, $D0, $CF, $D4, $FE, $D4, $DD, $D2, $DB, $DE, $CC, $D4, $D3, $FE, $D0, $00
-
-    ;       j    e    w    e    l         t    h    a    t         h    e    l    p    s
-    .byte $D9, $D4, $81, $D4, $DB, $FE, $CD, $D7, $D0, $CD, $FE, $D7, $D4, $DB, $DF, $CC, $00
-
-    ;       p    r    o    t    e    c    t         y    o    u    .
-    .byte $DF, $CB, $DE, $CD, $D4, $D2, $CD, $FE, $8C, $DE, $CE, $E9
+    ;       q    u    e         p    o    d    e         a    j    u    d    á    -    l    o    .
+    .byte $CA, $CE, $D4, $FE, $DF, $DE, $D3, $D4, $FE, $D0, $D9, $CE, $D3, $C6, $E5, $DB, $DE, $E9
 
     ; Terminator
     .byte $FF
@@ -1182,29 +1176,23 @@ Letter_World3:
 Letter_World4:
     ; "The thief who stole" / "the Whistle has" / "escaped to the east" / "side of the Sand" / "Dunes." / "I have enclosed a" / "jewel that helps" / "protect you."
 
-    ;       T    h    e         t    h    i    e    f         w    h    o         s    t    o    l    e
-    .byte $C3, $D7, $D4, $FE, $CD, $D7, $D8, $D4, $D5, $FE, $81, $D7, $DE, $FE, $CC, $CD, $DE, $DB, $D4, $00
+    ;       O         l    a    d    r    ã    o         q    u    e         r    o    u    b    o    u
+    .byte $BE, $FE, $DB, $D0, $D3, $CB, $9E, $DE, $FE, $CA, $CE, $D4, $FE, $CB, $DE, $CE, $D1, $DE, $CE, $00
 
-    ;       t    h    e         W    h    i    s    t    l    e         h    a    s
-    .byte $CD, $D7, $D4, $FE, $C6, $D7, $D8, $CC, $CD, $DB, $D4, $FE, $D7, $D0, $CC, $00
+    ;       u    m    a         f    l    a    u    t    a         f    u    g    i    u
+    .byte $CE, $DC, $D0, $FE, $D5, $DB, $D0, $CE, $CD, $D0, $FE, $D5, $CE, $D6, $D8, $CE, $00
 
-    ;       e    s    c    a    p    e    d         t    o         t    h    e         e    a    s    t
-    .byte $D4, $CC, $D2, $D0, $DF, $D4, $D3, $FE, $CD, $DE, $FE, $CD, $D7, $D4, $FE, $D4, $D0, $CC, $CD, $00
+    ;       p    a    r    a         o         l    e    s    t    e         d    a    s
+    .byte $DF, $D0, $CB, $D0, $FE, $DE, $FE, $DB, $D4, $CC, $CD, $D4, $FE, $D3, $D0, $CC, $00
 
-    ;       s    i    d    e         o    f         t    h    e         S    a    n    d
-    .byte $CC, $D8, $D3, $D4, $FE, $DE, $D5, $FE, $CD, $D7, $D4, $FE, $C2, $D0, $DD, $D3, $00
+    ;       d    u    n    a    s         d    e         a    r    e    i    a    .
+    .byte $D3, $CE, $DD, $D0, $CC, $FE, $D3, $D4, $FE, $D0, $CB, $D4, $D8, $D0, $E9, $00
 
-    ;       D    u    n    e    s    .
-    .byte $B3, $CE, $DD, $D4, $CC, $E9, $00
+    ;       E    u         i    n    c    l    u    í         u    m         t    e    s    o    u    r    o
+    .byte $B4, $CE, $FE, $D8, $DD, $D2, $DB, $CE, $C8, $FE, $CE, $DC, $FE, $CD, $D4, $CC, $DE, $CE, $CB, $DE, $00
 
-    ;       I         h    a    v    e         e    n    c    l    o    s    e    d         a
-    .byte $B8, $FE, $D7, $D0, $CF, $D4, $FE, $D4, $DD, $D2, $DB, $DE, $CC, $D4, $D3, $FE, $D0, $00
-
-    ;       j    e    w    e    l         t    h    a    t         h    e    l    p    s
-    .byte $D9, $D4, $81, $D4, $DB, $FE, $CD, $D7, $D0, $CD, $FE, $D7, $D4, $DB, $DF, $CC, $00
-
-    ;       p    r    o    t    e    c    t         y    o    u    .
-    .byte $DF, $CB, $DE, $CD, $D4, $D2, $CD, $FE, $8C, $DE, $CE, $E9
+    ;       q    u    e         p    o    d    e         a    j    u    d    á    -    l    o    .
+    .byte $CA, $CE, $D4, $FE, $DF, $DE, $D3, $D4, $FE, $D0, $D9, $CE, $D3, $C6, $E5, $DB, $DE, $E9
 
     ; Terminator
     .byte $FF
@@ -1213,29 +1201,26 @@ Letter_World4:
 Letter_World5:
     ; "Be careful in the" / "Ice World. The" / "creatures trapped in" / "the ice will come to" / "life if warmed." / "I have enclosed a" / "jewel that helps" / "protect you."
 
-    ;       B    e         c    a    r    e    f    u    l         i    n         t    h    e
-    .byte $B1, $D4, $FE, $D2, $D0, $CB, $D4, $D5, $CE, $DB, $FE, $D8, $DD, $FE, $CD, $D7, $D4, $00
+    ;       M    u    i    t    o         c    u    i    d    a    d    o         n    a
+    .byte $BC, $CE, $D8, $CD, $DE, $FE, $D2, $CE, $D8, $D3, $D0, $D3, $DE, $FE, $DD, $D0, $00
 
-    ;       I    c    e         W    o    r    l    d    .         T    h    e
-    .byte $B8, $D2, $D4, $FE, $C6, $DE, $CB, $DB, $D3, $E9, $FE, $C3, $D7, $D4, $00
+    ;       T    e    r    r    a         G    l    a    c    i    a    l    .
+    .byte $C3, $D4, $CB, $CB, $D0, $FE, $B6, $DB, $D0, $D2, $D8, $D0, $DB, $E9, $00
 
-    ;       c    r    e    a    t    u    r    e    s         t    r    a    p    p    e    d         i    n
-    .byte $D2, $CB, $D4, $D0, $CD, $CE, $CB, $D4, $CC, $FE, $CD, $CB, $D0, $DF, $DF, $D4, $D3, $FE, $D8, $DD, $00
+    ;       C    r    i    a    t    u    r    a    s         p    r    e    s    a    s         n    o
+    .byte $B2, $CB, $D8, $D0, $CD, $CE, $CB, $D0, $CC, $FE, $DF, $CB, $D4, $CC, $D0, $CC, $FE, $DD, $DE, $00
 
-    ;       t    h    e         i    c    e         w    i    l    l         c    o    m    e         t    o
-    .byte $CD, $D7, $D4, $FE, $D8, $D2, $D4, $FE, $81, $D8, $DB, $DB, $FE, $D2, $DE, $DC, $D4, $FE, $CD, $DE, $00
+    ;       g    e    l    o         v    o    l    t    a    r    ã    o         à         v    i    d    a
+    .byte $D6, $D4, $DB, $DE, $FE, $CF, $DE, $DB, $CD, $D0, $CB, $9E, $DE, $FE, $8C, $FE, $CF, $D8, $D3, $D0, $00
 
-    ;       l    i    f    e         i    f         w    a    r    m    e    d    .
-    .byte $DB, $D8, $D5, $D4, $FE, $D8, $D5, $FE, $81, $D0, $CB, $DC, $D4, $D3, $E9, $00
+    ;       s    e         f    o    r    e    m         a    q    u    e    c    i    d    a    s    .
+    .byte $CC, $D4, $FE, $D5, $DE, $CB, $D4, $DC, $FE, $D0, $CA, $CE, $D4, $D2, $D8, $D3, $D0, $CC, $E9, $00
 
-    ;       I         h    a    v    e         e    n    c    l    o    s    e    d         a
-    .byte $B8, $FE, $D7, $D0, $CF, $D4, $FE, $D4, $DD, $D2, $DB, $DE, $CC, $D4, $D3, $FE, $D0, $00
+    ;       E    u         i    n    c    l    u    í         u    m         t    e    s    o    u    r    o
+    .byte $B4, $CE, $FE, $D8, $DD, $D2, $DB, $CE, $C8, $FE, $CE, $DC, $FE, $CD, $D4, $CC, $DE, $CE, $CB, $DE, $00
 
-    ;       j    e    w    e    l         t    h    a    t         h    e    l    p    s
-    .byte $D9, $D4, $81, $D4, $DB, $FE, $CD, $D7, $D0, $CD, $FE, $D7, $D4, $DB, $DF, $CC, $00
-
-    ;       p    r    o    t    e    c    t         y    o    u    .
-    .byte $DF, $CB, $DE, $CD, $D4, $D2, $CD, $FE, $8C, $DE, $CE, $E9
+    ;       q    u    e         p    o    d    e         a    j    u    d    á    -    l    o    .
+    .byte $CA, $CE, $D4, $FE, $DF, $DE, $D3, $D4, $FE, $D0, $D9, $CE, $D3, $C6, $E5, $DB, $DE, $E9
 
     ; Terminator
     .byte $FF
@@ -1244,57 +1229,57 @@ Letter_World5:
 Letter_World6:
     ; "I am well. Please" / "retrieve the Magic" / "Whistle hidden in" / "the darkness at the" / "end of the Third" / "world. I have" / "enclosed a jewel" / "that helps" / "protect you."
 
-    ;       I         a    m         w    e    l    l    .         P    l    e    a    s    e
-    .byte $B8, $FE, $D0, $DC, $FE, $81, $D4, $DB, $DB, $E9, $FE, $BF, $DB, $D4, $D0, $CC, $D4, $00
+    ;       E    u         e    s    t    o    u         b    e    m    .
+    .byte $B4, $CE, $FE, $D4, $CC, $CD, $DE, $CE, $FE, $D1, $D4, $DC, $E9, $00
 
-    ;       r    e    t    r    i    e    v    e         t    h    e         M    a    g    i    c
-    .byte $CB, $D4, $CD, $CB, $D8, $D4, $CF, $D4, $FE, $CD, $D7, $D4, $FE, $BC, $D0, $D6, $D8, $D2, $00
+    ;       P    o    r         f    a    v    o    r    ,         r    e    c    u    p    e    r    e
+    .byte $BF, $DE, $CB, $FE, $D5, $D0, $CF, $DE, $CB, $9A, $FE, $CB, $D4, $D2, $CE, $DF, $D4, $CB, $D4, $00
 
-    ;       W    h    i    s    t    l    e         h    i    d    d    e    n         i    n
-    .byte $C6, $D7, $D8, $CC, $CD, $DB, $D4, $FE, $D7, $D8, $D3, $D3, $D4, $DD, $FE, $D8, $DD, $00
+    ;       a         F    l    a    u    t    a         T    r    a    n    s    p    o    r    t    e
+    .byte $D0, $FE, $B5, $DB, $D0, $CE, $CD, $D0, $FE, $C3, $CB, $D0, $DD, $CC, $DF, $DE, $CB, $CD, $D4, $00
 
-    ;       t    h    e         d    a    r    k    n    e    s    s         a    t         t    h    e
-    .byte $CD, $D7, $D4, $FE, $D3, $D0, $CB, $DA, $DD, $D4, $CC, $CC, $FE, $D0, $CD, $FE, $CD, $D7, $D4, $00
+    ;       q    u    e         s    e         e    s    c    o    n    d    e         n    o
+    .byte $CA, $CE, $D4, $FE, $CC, $D4, $FE, $D4, $CC, $D2, $DE, $DD, $D3, $D4, $FE, $DD, $DE, $00
 
-    ;       e    n    d         o    f         t    h    e         T    h    i    r    d
-    .byte $D4, $DD, $D3, $FE, $DE, $D5, $FE, $CD, $D7, $D4, $FE, $C3, $D7, $D8, $CB, $D3, $00
+    ;       f    i    m         d    o         t    e    r    c    e    i    r    o
+    .byte $D5, $D8, $DC, $FE, $D3, $DE, $FE, $CD, $D4, $CB, $D2, $D4, $D8, $CB, $DE, $00
 
-    ;       w    o    r    l    d    .         I         h    a    v    e
-    .byte $81, $DE, $CB, $DB, $D3, $E9, $FE, $B8, $FE, $D7, $D0, $CF, $D4, $00
+    ;       c    a    m    i    n    h    o    ,         e    m         m    e    i    o
+    .byte $D2, $D0, $DC, $D8, $DD, $D7, $DE, $9A, $FE, $D4, $DC, $FE, $DC, $D4, $D8, $DE, $00
 
-    ;       e    n    c    l    o    s    e    d         a         j    e    w    e    l
-    .byte $D4, $DD, $D2, $DB, $DE, $CC, $D4, $D3, $FE, $D0, $FE, $D9, $D4, $81, $D4, $DB, $00
+    ;       à         e    s    c    u    r    i    d    ã    o    .         I    n    c    l    u    í
+    .byte $8C, $FE, $D4, $CC, $D2, $CE, $CB, $D8, $D3, $9E, $DE, $E9, $FE, $B8, $DD, $D2, $DB, $CE, $C8, $00
 
-    ;       t    h    a    t         h    e    l    p    s
-    .byte $CD, $D7, $D0, $CD, $FE, $D7, $D4, $DB, $DF, $CC, $00
+    ;       u    m         t    e    s    o    u    r    o         q    u    e         
+    .byte $CE, $DC, $FE, $CD, $D4, $CC, $DE, $CE, $CB, $DE, $FE, $CA, $CE, $D4, $00
 
-    ;       p    r    o    t    e    c    t         y    o    u    .
-    .byte $DF, $CB, $DE, $CD, $D4, $D2, $CD, $FE, $8C, $DE, $CE, $E9, $FF
+    ;       p    o    d    e         a    j    u    d    á    -    l    o    .
+    .byte $DF, $DE, $D3, $D4, $FE, $D0, $D9, $CE, $D3, $C6, $E5, $DB, $DE, $E9, $FF
 
 
 Letter_World7:
     ; "I kidnapped the" / "Princess while you" / "were running around." / "She's here in my" / "castle,if you dare" / "to try and rescue" / "    her."
 
-    ;       I         k    i    d    n    a    p    p    e    d         t    h    e
-    .byte $B8, $FE, $DA, $D8, $D3, $DD, $D0, $DF, $DF, $D4, $D3, $FE, $CD, $D7, $D4, $00
+    ;       E    u         r    a    p    t    e    i         a         p    r    i    n    c    e    s    a
+    .byte $B4, $CE, $FE, $CB, $D0, $DF, $CD, $D4, $D8, $FE, $D0, $FE, $DF, $CB, $D8, $DD, $D2, $D4, $CC, $D0, $00
 
-    ;       P    r    i    n    c    e    s    s         w    h    i    l    e         y    o    u
-    .byte $DF, $CB, $D8, $DD, $D2, $D4, $CC, $CC, $FE, $81, $D7, $D8, $DB, $D4, $FE, $8C, $DE, $CE, $00
+    ;       e    n    q    u    a    n    t    o         v    o    c    ê    s         t    a    v    a    m 
+    .byte $D4, $DD, $CA, $CE, $D0, $DD, $CD, $DE, $FE, $CF, $DE, $D2, $DA, $CC, $FE, $CD, $D0, $CF, $D0, $DC, $00
 
-    ;       w    e    r    e         r    u    n    n    i    n    g         a    r    o    u    n    d    .
-    .byte $81, $D4, $CB, $D4, $FE, $CB, $CE, $DD, $DD, $D8, $DD, $D6, $FE, $D0, $CB, $DE, $CE, $DD, $D3, $E9, $00
+    ;       c    o    r    r    e    n    d    o         c    o    m    o         b    a    r    a    t    a
+    .byte $D2, $DE, $CB, $CB, $D4, $DD, $D3, $DE, $FE, $D2, $DE, $DC, $DE, $FE, $D1, $D0, $CB, $D0, $CD, $D0, $00
 
-    ;       S    h    e    '    s         h    e    r    e         i    n         m    y
-    .byte $C2, $D7, $D4, $AB, $CC, $FE, $D7, $D4, $CB, $D4, $FE, $D8, $DD, $FE, $DC, $8C, $00
+    ;       t    o    n    t    a    .
+    .byte $CD, $DE, $DD, $CD, $D0, $E9, $00
 
-    ;       c    a    s    t    l    e    ,    i    f         y    o    u         d    a    r    e
-    .byte $D2, $D0, $CC, $CD, $DB, $D4, $9A, $D8, $D5, $FE, $8C, $DE, $CE, $FE, $D3, $D0, $CB, $D4, $00
+    ;       E    l    a         t    á         a    q    u    i         n    o         m    e    u
+    .byte $B4, $DB, $D0, $FE, $CD, $C6, $FE, $D0, $CA, $CE, $D8, $FE, $DD, $DE, $FE, $DC, $D4, $CE, $00
 
-    ;       t    o         t    r    y         a    n    d         r    e    s    c    u    e
-    .byte $CD, $DE, $FE, $CD, $CB, $8C, $FE, $D0, $DD, $D3, $FE, $CB, $D4, $CC, $D2, $CE, $D4, $00
+    ;       c    a    s    t    e    l    o    ,         s    e         v    o    c    ê         s    e
+    .byte $D2, $D0, $CC, $CD, $D4, $DB, $DE, $9A, $FE, $CC, $D4, $FE, $CF, $DE, $D2, $DA, $FE, $CC, $D4, $00
 
-    ;                           h    e    r    .
-    .byte $FE, $FE, $FE, $FE, $D7, $D4, $CB, $E9, $FF
+    ;       a    t    r    e    v    e         a         r    e    s    g    a    t    á    -    l    a    !   
+    .byte $D0, $CD, $CB, $D4, $CF, $D4, $FE, $D0, $FE, $CB, $D4, $CC, $D6, $D0, $CD, $C6, $E5, $DB, $D0, $EA, $FF
 
 
 LetterRow_VRAM_L:   .byte $4A, $2A, $06, $E6, $C6, $A6, $86, $66, $46
@@ -1302,35 +1287,35 @@ LetterRow_VRAM_H:   .byte $22, $22, $22, $21, $21, $21, $21, $21, $21
 
 Letter_Header:
     ; Greeting ("Greetings,")
-    ;       G    r    e    e    t    i    n    g    s    ,
-    .byte $B6, $CB, $D4, $D4, $CD, $D8, $DD, $D6, $CC, $9A, $00
+    ;       S    a    u    d    a    ç    õ    e    s    ,
+    .byte $C2, $D0, $CE, $D3, $D0, $AB, $9F, $D4, $CC, $9A, $00
 
     ; Closing (Nothing)
     .byte $00
 
     ; Signature top row ("Princess")
-    ;       P    r    i    n    c    e    s    s
-    .byte $BF, $CB, $D8, $DD, $D2, $D4, $CC, $CC, $00
+    ;       P    r    i    n    c    e    s    a
+    .byte $BF, $CB, $D8, $DD, $D2, $D4, $CC, $D0, $00
 
     ; Signature bottom row ("     Toadstool.")
-    ;                                T    o    a    d    s    t    o    o    l    .
-    .byte $FE, $FE, $FE, $FE, $FE, $C3, $DE, $D0, $D3, $CC, $CD, $DE, $DE, $DB, $E9, $FF
+    ;                                          C    o    g    u    m    e    l    o
+    .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $B2, $DE, $D6, $CE, $DC, $D4, $DB, $DE, $FF
 
 Letter_HeaderBowser:
     ; Greeting ("Yo!")
-    ;       Y    o    !
-    .byte $C8, $DE, $EA, $00
+    ;       A    í    ,         v    a    c    i    l    ã    o    !
+    .byte $B0, $C8, $9A, $FE, $CF, $D0, $D2, $D8, $DB, $9E, $DE, $EA, $00
 
     ; Closing ("Ha ha ha...")
-    ;       H    a         h    a         h    a    .    .    .
-    .byte $B7, $D0, $FE, $D7, $D0, $FE, $D7, $D0, $E9, $E9, $E9, $00
+    ;       B    á         h    a         h    a    ,
+    .byte $B1, $C6, $FE, $D7, $D0, $FE, $D7, $D0, $9A, $00
 
     ; Signature top row (Nothing)
     .byte $00
 
     ; Signature bottom row ("King of the Koopa")
-    ;       K    i    n    g         o    f         t    h    e         K    o    o    p    a
-    .byte $BA, $D8, $DD, $D6, $FE, $DE, $D5, $FE, $CD, $D7, $D4, $FE, $BA, $DE, $DE, $DF, $D0, $FF
+    ;            R    e    i         d    o    s         K    o    o    p    a    s
+    .byte $FE, $C1, $D4, $D8, $FE, $D3, $DE, $CC, $FE, $BA, $DE, $DE, $DF, $D0, $CC, $FF
 
     ; Letter header offset by world
 Letter_HeaderOffset:

@@ -320,11 +320,11 @@ EndLevelCard_PalData:
     .byte VU_REPEAT | $03, $0F
     .byte $00   ; Terminator
 
-Video_YouGotCardH:
-    DBYT $22C7
-    .byte $13
-    ;       Y    O    U         G    O    T         A         C    A    R    D         |              |
-    .byte $0D, $0E, $0A, $FC, $06, $0E, $09, $FC, $00, $FC, $05, $00, $02, $07, $FC, $26, $FE, $FE, $27
+Video_YouGotCardH: ;[BR]
+    DBYT $22C6
+    .byte $14
+    ;       G    A    N    H    O    U         O         P    A    I    N    E    L         |              |
+    .byte $06, $00, $09, $01, $0E, $0A, $7C, $0E, $7C, $1C, $00, $1D, $09, $04, $0B, $7C, $26, $7E, $7E, $27
     DBYT $22B6
     .byte $04 ;  _    _    _   _
     ;           |               |
@@ -343,16 +343,17 @@ Video_YouGotCardH:
     .byte $00   ; Terminator
 
 Video_CourseClear:
-    DBYT $2889
-    .byte $0E
-    ;       C    O    U    R    S    E         C    L    E    A    R         !
-    .byte $85, $8E, $8A, $82, $83, $84, $FC, $85, $8B, $84, $80, $82, $FC, $9B, $00
-
+    DBYT $2888
+    .byte 16
+    ;       F    A    S    E         C    O    N    C    L    U    Í    D    A         !
+    .byte $82, $80, $83, $84, $FC, $85, $8E, $89, $85, $8B, $8A, $8D, $87, $80, $FC, $9B
+    .byte $00   ; Terminator
+    
 Video_YouGotCard:
-    DBYT $28E7
-    .byte $13
-    ;       Y    O    U         G    O    T         A         C    A    R    D         |              |
-    .byte $8D, $8E, $8A, $FC, $86, $8E, $89, $FC, $80, $FC, $85, $80, $82, $87, $FC, $A6, $FE, $FE, $A7
+    DBYT $28E6
+    .byte 20
+    ;       G    A    N    H    O    U         O         P    A    I    N    E    L         |              |
+    .byte $86, $80, $89, $81, $8E, $8A, $FC, $8E, $FC, $9C, $80, $9D, $89, $84, $8B, $FC, $A6, $FE, $FE, $A7
 
     DBYT $28D6
     .byte $04 ;  _    _    _   _
@@ -422,12 +423,12 @@ PAGE_A000_ByTileset: ; $83E9
     ; The normal level VROM page cycle set
 PT2_Anim:   .byte $60, $62, $64, $66
 
-PAUSE_Sprites:
+PAUSE_Sprites: ;[BR]
     .byte $58, $F1, $03, $60    ; P
     .byte $58, $F5, $03, $70    ; A
     .byte $58, $F9, $03, $80    ; U
     .byte $58, $FD, $03, $90    ; S
-    .byte $58, $FF, $03, $A0    ; E
+    .byte $58, $F5, $03, $A0    ; A <- E
 PAUSE_Sprites_End
 
     ; The BGM per world (see also World_BGM_Restore in PRG010)

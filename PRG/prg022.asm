@@ -1693,15 +1693,16 @@ BonusGame_UNUSED0_Text:
 
     ; Spade Instruction
     ; English: "Line up the pictures and" / "get a prize!" / "You only get one try."
+    ; [BR]
 BonusGame_Spade_Text:
-    ;       L    i    n    e         u    p         t    h    e         p    i    c    t    u    r    e    s         a    n    d
-    .byte $BB, $D8, $DD, $D4, $FE, $CE, $DF, $FE, $CD, $D7, $D4, $FE, $DF, $D8, $D2, $CD, $CE, $CB, $D4, $CC, $FE, $D0, $DD, $D3, $00
+    ;       A    l    i    n    h    e         a    s         i    m    a    g    e    n    s         p    r    a
+    .byte $B0, $DB, $D8, $DD, $D7, $D4, $FE, $D0, $CC, $FE, $D8, $DC, $D0, $D6, $D4, $DD, $CC, $FE, $DF, $CB, $D0, $00
 
-    ;       g    e    t         a         p    r    i    z    e    !
-    .byte $D6, $D4, $CD, $FE, $D0, $FE, $DF, $CB, $D8, $8F, $D4, $EA, $00
+    ;       g    a    n    h    a    r         u    m         p    r    ê    m    i    o    !
+    .byte $D6, $D0, $DD, $D7, $D0, $CB, $FE, $CE, $DC, $FE, $DF, $CB, $DA, $DC, $D8, $DE, $EA, $00
 
-    ;       Y    o    u         o    n    l    y         g    e    t         o    n    e         t    r    y    .
-    .byte $C8, $DE, $CE, $FE, $DE, $DD, $DB, $8C, $FE, $D6, $D4, $CD, $FE, $DE, $DD, $D4, $FE, $CD, $CB, $8C, $E9
+    ;       V    o    c    ê         s    ó         t    e    m         u    m    a         c    h    a    n    c    e    .
+    .byte $C5, $DE, $D2, $DA, $FE, $CC, $C9, $FE, $CD, $D4, $DC, $FE, $CE, $DC, $D0, $FE, $D2, $D7, $D0, $DD, $D2, $D4, $E9
 
     ; (Terminator, value into Bonus_Round2)
     .byte $FF, BONUS_SPADE
@@ -1709,14 +1710,14 @@ BonusGame_Spade_Text:
     ; N-Spade Instruction
     ; English: "Flip over any two cards" / "and see if they match." / "You can only miss twice!"
 BonusGame_NSpade_Text:
-    ;       F    l    i    p         o    v    e    r         a    n    y         t    w    o         c    a    r    d    s
-    .byte $B5, $DB, $D8, $DF, $FE, $DE, $CF, $D4, $CB, $FE, $D0, $DD, $8C, $FE, $CD, $81, $DE, $FE, $D2, $D0, $CB, $D3, $CC, $00
+    ;       V    i    r    e         d    u    a    s         c    a    r    t    a    s         e         v    e    j    a
+    .byte $C5, $D8, $CB, $D4, $FE, $D3, $CE, $D0, $CC, $FE, $D2, $D0, $CB, $CD, $D0, $CC, $FE, $D4, $FE, $CF, $D4, $D9, $D0, $00
 
-    ;       a    n    d         s    e    e         i    f         t    h    e    y         m    a    t    c    h    .
-    .byte $D0, $DD, $D3, $FE, $CC, $D4, $D4, $FE, $D8, $D5, $FE, $CD, $D7, $D4, $8C, $FE, $DC, $D0, $CD, $D2, $D7, $E9, $00
+    ;       s    e         e    l    a    s         b    a    t    e    m    .
+    .byte $CC, $D4, $FE, $D4, $DB, $D0, $CC, $FE, $D1, $D0, $CD, $D4, $DC, $E9, $00
 
-    ;       Y    o    u         c    a    n         o    n    l    y         m    i    s    s         t    w    i    c    e    !
-    .byte $C8, $DE, $CE, $FE, $D2, $D0, $DD, $FE, $DE, $DD, $DB, $8C, $FE, $DC, $D8, $CC, $CC, $FE, $CD, $81, $D8, $D2, $D4, $EA
+    ;       D    o    i    s         e    r    r    o    s         e         a    c    a    b    o    u    !
+    .byte $B3, $DE, $D8, $CC, $FE, $D4, $CB, $CB, $DE, $CC, $FE, $D4, $FE, $D0, $D2, $D0, $D1, $DE, $CE, $EA
 
     ; (Terminator, value into Bonus_Round2)
     .byte $FF, BONUS_NSPADE
@@ -3848,7 +3849,7 @@ PRG022_D777:
     .byte $7F, $BF, $FF, $7F, $7F
 
     ; For the 1-up, 10 coin, and 20 coin cards that have additional text, patterns of the bottom row
-Card_BottomLeft:    .byte $78, $9D, $9E
+Card_BottomLeft:    .byte $78, $26, $27 ; [BR] New number index for 1 and 2
 Card_BottomRight:   .byte $79, $7B, $7B
 
 NSpade_DoGame:

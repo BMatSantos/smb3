@@ -3935,18 +3935,19 @@ PRG002_B325:
     RTS      ; Return
 
     ; English: "Pick a box." / "Its contents" / "will help you" / "on your way"
+    ; [BR]
 ToadMsg_Standard:
-    ;            P    i    c    k         a         b    o    x    .
-    .byte $FE, $BF, $D8, $D2, $DA, $FE, $D0, $FE, $D1, $DE, $88, $E9, $FE, $FE, $FE
+    ;       E    s    c    o    l    h    a         u    m         b    a    ú    .
+    .byte $B4, $CC, $D2, $DE, $DB, $D7, $D0, $FE, $CE, $DC, $FE, $D1, $D0, $FA, $E9
 
-    ;            I    t    s         c    o    n    t    e    n    t    s
-    .byte $FE, $B8, $CD, $CC, $FE, $D2, $DE, $DD, $CD, $D4, $DD, $CD, $CC, $FE, $FE
+    ;       T    a    l         c    o    n    t    e    ú    d    o
+    .byte $C3, $D0, $DB, $FE, $D2, $DE, $DD, $CD, $D4, $FA, $D3, $DE, $FE, $FE, $FE
 
-    ;            w    i    l    l         h    e    l    p         y    o    u
-    .byte $FE, $81, $D8, $DB, $DB, $FE, $D7, $D4, $DB, $DF, $FE, $8C, $DE, $CE, $FE
+    ;       v    a    i         t    e         a    j    u    d    a    r
+    .byte $CF, $D0, $D8, $FE, $CD, $D4, $FE, $D0, $D9, $CE, $D3, $D0, $CB, $FE, $FE
 
-    ;            o    n         y    o    u    r         w    a    y    .
-    .byte $FE, $DE, $DD, $FE, $8C, $DE, $CE, $CB, $FE, $81, $D0, $8C, $E9, $FE, $FE
+    ;       n    a         s    u    a         j    o    r    n    a    d    a    .
+    .byte $DD, $D0, $FE, $CC, $CE, $D0, $FE, $D9, $DE, $CB, $DD, $D0, $D3, $D0, $E9
 
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
@@ -3956,40 +3957,40 @@ ToadMsg_Standard:
 
     ; English: "One toot on" / "this whistle" / "will send you" / "to a far away" / "land!"
 ToadMsg_WarpWhistle:
-    ;       O    n    e         t    o    o    t         o    n
-    .byte $BE, $DD, $D4, $FE, $CD, $DE, $DE, $CD, $FE, $DE, $DD, $FE, $FE, $FE, $FE
+    ;       U    m         s    o    p    r    o         n    e    s    s    a
+    .byte $C4, $DC, $FE, $CC, $DE, $DF, $CB, $DE, $FE, $DD, $D4, $CC, $CC, $D0, $FE
 
-    ;       t    h    i    s         w    h    i    s    t    l    e
-    .byte $CD, $D7, $D8, $CC, $FE, $81, $D7, $D8, $CC, $CD, $DB, $D4, $FE, $FE, $FE
+    ;       f    l    a    u    t    a         v    a    i         t    e
+    .byte $D5, $DB, $D0, $CE, $CD, $D0, $FE, $CF, $D0, $D8, $FE, $CD, $D4, $FE, $FE
 
-    ;       w    i    l    l         s    e    n    d         y    o    u
-    .byte $81, $D8, $DB, $DB, $FE, $CC, $D4, $DD, $D3, $FE, $8C, $DE, $CE, $FE, $FE
+    ;       m    a    n    d    a    r         p    a    r    a         u    m    a
+    .byte $DC, $D0, $DD, $D3, $D0, $CB, $FE, $DF, $D0, $CB, $D0, $FE, $CE, $DC, $D0
 
-    ;       t    o         a         f    a    r         a    w    a    y
-    .byte $CD, $DE, $FE, $D0, $FE, $D5, $D0, $CB, $E5, $D0, $81, $D0, $8C, $FE, $FE
+    ;       t    e    r    r    a         d    i    s    t    a    n    t    e    !
+    .byte $CD, $D4, $CB, $CB, $D0, $FE, $D3, $D8, $CC, $CD, $D0, $DD, $CD, $D4, $EA
 
-    ;       l    a    n    d    !
-    .byte $DB, $D0, $DD, $D3, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       
+    .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ; English: "Hello! You" / "found my shop" / "of strange and" / "wonderful" / "things!"
 ToadMsg_AnchorPWing:
-    ;            H    e    l    l    o    !         Y    o    u
-    .byte $FE, $B7, $D4, $DB, $DB, $DE, $EA, $FE, $C8, $DE, $CE, $FE, $FE, $FE, $FE
+    ;       O    l    á    !         V    o    c    ê         a    c    h    o    u
+    .byte $BE, $DB, $C6, $EA, $FE, $C5, $DE, $D2, $DA, $FE, $D0, $D2, $D7, $DE, $CE
 
-    ;            f    o    u    n    d         m    y         s    h    o    p
-    .byte $FE, $D5, $DE, $CE, $DD, $D3, $FE, $DC, $8C, $FE, $CC, $D7, $DE, $DF, $FE
+    ;       a         m    i    n    h    a         l    o    j    a         d    e     
+    .byte $D0, $FE, $DC, $D8, $DD, $D7, $D0, $FE, $DB, $DE, $D9, $D0, $FE, $D3, $D4
 
-    ;            o    f         s    t    r    a    n    g    e         a    n    d
-    .byte $FE, $DE, $D5, $FE, $CC, $CD, $CB, $D0, $DD, $D6, $D4, $FE, $D0, $DD, $D3
+    ;       i    t    e    n    s         m    í    s    t    i    c    o    s
+    .byte $D8, $CD, $D4, $DD, $CC, $FE, $DC, $C8, $CC, $CD, $D8, $D2, $DE, $CC, $FE
 
-    ;            w    o    n    d    e    r    f    u    l
-    .byte $FE, $81, $DE, $DD, $D3, $D4, $CB, $D5, $CE, $DB, $FE, $FE, $FE, $FE, $FE
+    ;       e         m    a    r    a    v    i    l    h    o    s    o    s    !
+    .byte $D4, $FE, $DC, $D0, $CB, $D0, $CF, $D8, $DB, $D7, $DE, $CC, $DE, $CC, $EA
 
-    ;            t    h    i    n    g    s    !
-    .byte $FE, $CD, $D7, $D8, $DD, $D6, $CC, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;
+    .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE

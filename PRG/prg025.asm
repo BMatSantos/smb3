@@ -351,16 +351,26 @@ Title_Checkerboard_Floor:
     .byte 32    ; 32 bytes to follow
     .byte $E6, $E6, $E7, $E7, $E6, $E6, $E7, $E7, $E6, $E6, $E7, $E7, $E6, $E6, $E7, $E7
     .byte $E6, $E6, $E7, $E7, $E6, $E6, $E7, $E7, $E6, $E6, $E7, $E7, $E6, $E6, $E7, $E7
-
+    ;[BR]
     DBYT $2B40
     .byte 32    ; 32 bytes to follow
-    .byte $F6, $F6, $F7, $F7, $F6, $F6, $F7, $F7, $F6, $F6, $F7, $F7, $F6, $F6, $F7, $F7
-    .byte $F6, $F6, $F7, $F7, $F6, $F6, $F7, $F7, $F6, $F6, $F7, $F7, $F6, $F6, $F7, $F7
+    .byte $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F
+    .byte $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F
 
     DBYT $2B60
     .byte 32    ; 32 bytes to follow
     .byte $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F
     .byte $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F
+
+    DBYT $2B80
+    .byte 32    ; 32 bytes to follow
+    .byte $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D
+    .byte $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D
+
+    DBYT $2BA0
+    .byte 32    ; 32 bytes to follow
+    .byte $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D
+    .byte $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D, $5F, $5F, $5D, $5D
 
     ; Terminator!
     .byte $00
@@ -404,7 +414,7 @@ TitleScreen_LogoLine05:
     .byte VU_REPEAT | $0B, $5C
 
     DBYT $208B
-    .byte $15, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $3A, $5C, $5C, $5C, $5C
+    .byte $15, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $5C, $5C, $5C, $5C, $5C
     .byte $3B, $3C, $3D, $3E, $5C, $5C
 
     ; Terminator
@@ -432,10 +442,11 @@ TitleScreen_LogoLine07:
     ; Terminator
     .byte $00
 
-TitleScreen_LogoLine08:
+TitleScreen_LogoLine08: ; [BR]
     DBYT $20E0
-    .byte $16, $5C, $5C, $4B, $4C, $4D, $4E, $5C, $5C, $5C, $5C, $5C, $60, $61, $62, $63
-    .byte $64, $65, $66, $67, $68, $69, $6A
+    .byte $16
+    .byte $5C, $5C, $4B, $4C, $4D, $4E, $5C, $5C, $5C, $5C, $79, $60, $61, $62, $63, $64
+    .byte $65, $66, $67, $68, $69, $6A
 
     DBYT $20F6
     .byte VU_REPEAT | $0A, $5C
@@ -445,45 +456,45 @@ TitleScreen_LogoLine08:
 
 TitleScreen_LogoLine09:
     DBYT $2100
-    .byte $20, $5C, $5C, $5C, $5C, $5C, $70, $71, $72, $73, $74, $75, $76, $77, $78, $79
-    .byte $7A, $7B, $5C, $7D, $7E, $7F, $C0, $C1, $C2, $C3, $C4, $C5, $5C, $5C, $5C, $5C
-    .byte $5C
+    .byte $20
+    .byte $5C, $5C, $5C, $5C, $7E, $7F, $C0, $C1, $71, $72, $7A, $7B, $C2, $C3, $C4, $C5
+    .byte $70, $71, $72, $73, $74, $75, $76, $77, $78, $5C, $5C, $5C, $5C, $5C, $5C, $5C
 
     ; Terminator
     .byte $00
 
 TitleScreen_LogoLine10:
     DBYT $2120
-    .byte $20, $5C, $5C, $5C, $5C, $5C, $80, $81, $82, $83, $84, $85, $86, $87, $88, $89
-    .byte $8A, $8B, $8C, $8D, $8E, $8F, $D0, $D1, $D2, $D3, $D4, $D5, $5C, $5C, $5C, $5C
-    .byte $5C
+    .byte $20
+    .byte $5C, $5C, $5C, $5C, $8E, $8F, $D0, $D1, $81, $82, $83, $84, $D2, $D3, $D4, $D5
+    .byte $80, $81, $82, $83, $84, $85, $86, $87, $88, $89, $8A, $8B, $5C, $5C, $5C, $5C
 
     ; Terminator
     .byte $00
 
 TitleScreen_LogoLine11:
     DBYT $2140
-    .byte $20, $5C, $5C, $5C, $5C, $5C, $90, $91, $92, $93, $94, $95, $96, $97, $98, $99
-    .byte $9A, $9B, $9C, $9D, $9E, $9F, $E0, $E1, $E2, $E3, $E4, $E5, $5C, $5C, $5C, $5C
-    .byte $5C
+    .byte $20
+    .byte $5C, $5C, $5C, $5C, $9E, $9F, $E0, $E1, $91, $92, $93, $94, $E2, $E3, $E4, $E5
+    .byte $90, $91, $92, $93, $94, $95, $96, $97, $98, $99, $9A, $9B, $9C, $5C, $5C, $5C
 
     ; Terminator
     .byte $00
 
 TitleScreen_LogoLine12:
     DBYT $2160
-    .byte $20, $5C, $5C, $5C, $5C, $5C, $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8, $A9
-    .byte $AA, $AB, $AC, $AD, $AE, $AF, $F0, $F1, $F2, $F3, $F4, $F5, $5C, $5C, $5C, $5C
-    .byte $5C
+    .byte $20
+    .byte $5C, $5C, $5C, $5C, $AE, $AF, $F0, $F1, $A1, $A2, $A3, $A4, $F2, $F3, $F4, $F5
+    .byte $A0, $A1, $A2, $A3, $A4, $A5, $A6, $A7, $A8, $A9, $AA, $AB, $AC, $5C, $5C, $5C
 
     ; Terminator
     .byte $00
 
 TitleScreen_LogoLine13:
     DBYT $2180
-    .byte $20, $5B, $6B, $5C, $5C, $5C, $B0, $B1, $B2, $B3, $B4, $B5, $B6, $B7, $B8, $B9
-    .byte $BA, $BB, $BC, $BD, $BE, $BF, $C6, $C7, $C8, $D6, $D7, $D8, $E8, $04, $05, $06
-    .byte $07
+    .byte $20
+    .byte $5B, $6B, $5C, $5C, $5C, $BF, $5E, $C6, $5E, $B2, $B3, $B4, $B5, $C7, $D6, $D7
+    .byte $B0, $B1, $B2, $B3, $B4, $B5, $B6, $B7, $B8, $B9, $BA, $BB, $BC, $5C, $5C, $5C
 
     ; Terminator
     .byte $00
@@ -493,8 +504,9 @@ TitleScreen_LogoLine14:
     .byte VU_REPEAT | $0E, $5C
 
     DBYT $21AE
-    .byte $12, $C9, $CA, $CB, $CC, $CD, $CE, $CF, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $14
-    .byte $21, $21, $17
+    .byte $12
+    .byte $C9, $CA, $CB, $CC, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C
+    .byte $5C, $5C
 
     ; Terminator
     .byte $00
@@ -504,8 +516,9 @@ TitleScreen_LogoLine15:
     .byte VU_REPEAT | $0E, $5C
 
     DBYT $21CE
-    .byte $12, $D9, $DA, $DB, $DC, $DD, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $20
-    .byte $21, $21, $23
+    .byte $12
+    .byte $D9, $DA, $DB, $DC, $DD, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $04, $05
+    .byte $06, $07
 
     ; Terminator
     .byte $00
@@ -515,35 +528,35 @@ TitleScreen_LogoLine16:
     .byte VU_REPEAT | $0E, $5C
 
     DBYT $21EE
-    .byte $12, $E9, $EA, $EB, $EC, $ED, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $20
-    .byte $21, $21, $23
+    .byte $12, $E9, $EA, $EB, $EC, $ED, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $14
+    .byte $21, $21, $22
 
     ; Terminator
     .byte $00
 
 TitleScreen_LogoLine17:
     DBYT $2200
-    .byte $20, $04, $05, $06, $07, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $F9
-    .byte $FA, $FB, $FF, $FD, $FE, $5C, $5C, $5C, $5C, $5C, $5C, $04, $05, $02, $03, $21
-    .byte $23
+    .byte $20
+    .byte $04, $05, $06, $07, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $F9, $FA
+    .byte $FB, $FF, $FD, $FE, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $20, $21, $21, $23
 
     ; Terminator
     .byte $00
 
 TitleScreen_LogoLine18:
     DBYT $2220
-    .byte $20, $14, $21, $21, $22, $24, $25, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $6C
-    .byte $6D, $6E, $6F, $DE, $DF, $5C, $5C, $5C, $5C, $5C, $5C, $14, $21, $21, $13, $21
-    .byte $23
+    .byte $20
+    .byte $14, $21, $21, $22, $24, $25, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $6C, $6D
+    .byte $6E, $6F, $DE, $DF, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $20, $21, $21, $23
 
     ; Terminator
     .byte $00
 
 TitleScreen_LogoLine19:
     DBYT $2240
-    .byte $20, $20, $21, $21, $23, $5F, $11, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C
-    .byte $5C, $EE, $EF, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $20, $21, $21, $21, $21
-    .byte $23
+    .byte $20
+    .byte $20, $21, $21, $23, $5F, $11, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C
+    .byte $EE, $EF, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $5C, $04, $05, $02, $03, $21, $23
 
     ; Terminator
     .byte $00
@@ -556,7 +569,7 @@ TitleScreen_LogoLine20:
     .byte VU_REPEAT | $14, $5C
 
     DBYT $227A
-    .byte $06, $20, $21, $21, $21, $21, $23
+    .byte $06, $14, $21, $21, $13, $21, $23
 
     ; Terminator
     .byte $00
@@ -613,11 +626,11 @@ TitleScreen_LogoLine24:
     ; Terminator
     .byte $00
 
-TitleScreen_LogoAttr1:
+TitleScreen_LogoAttr1: ;[BR]
     DBYT $23C0
-    .byte $20, $F0, $F0, $F0, $F0, $F0, $F0, $F0, $F0, $2A, $8A, $66, $55, $55, $99, $A2
-    .byte $A8, $AA, $55, $55, $55, $55, $55, $55, $A9, $A8, $A6, $A5, $ED, $77, $B5, $A5
-    .byte $AA
+    .byte $20, $F0, $00, $00, $F0, $F0, $F0, $F0, $F0, $2A, $8A, $66, $55, $55, $99, $A2
+    .byte $A8, $AA, $55, $55, $55, $55, $55, $55, $55, $A8, $A5, $A5, $ED, $77, $B5, $A5
+    .byte $A5
 
     ; Terminator
     .byte $00
@@ -671,22 +684,28 @@ Title_FadeIn_4:
     .byte $37, $0F, $30, $16, $37, $0F, $21, $02, $37, $0F, $2A, $1A, $37, $0F, $27, $02
     .byte $00   ; Terminator
 
-Title_LoadMenu:
+Title_LoadMenu: ; [BR]
 
     ; 1 PLAYER GAME
     DBYT $226A
-    .byte 13    ; 13 bytes to follow
-    .byte $0E, $5C, $0A, $0B, $0C, $1A, $1B, $0D, $5C, $1C, $0C, $1D, $1B
+    .byte 9    ; 13 bytes to follow
+    .byte $0E, $5C, $0A, $0B, $0C, $0D, $1A, $0B, $1B
 
     ; 2 PLAYER GAME
     DBYT $22AA
-    .byte 13    ; 13 bytes to follow
-    .byte $1E, $5C, $0A, $0B, $0C, $1A, $1B, $0D, $5C, $1C, $0C, $1D, $1B
+    .byte 11    ; 13 bytes to follow
+    .byte $1E, $5C, $0A, $0B, $0C, $0D, $1A, $0B, $1B, $1C, $1D
 
     ; C 1988 Nintendo
     DBYT $22EA
     .byte 13    ; 13 bytes to follow
     .byte $3F, $5C, $0E, $0F, $1F, $1F, $5C, $2A, $2B, $2C, $2D, $2E, $2F
+
+    ; [BR] Translation credits
+    DBYT $2064
+    .byte 24
+    .byte $BD, $BE, $1E, $3A, $1E, $0E, $5C, $C8, $D8, $E8, $F8, $8C, $E8, $9D, $F8, $7D
+    .byte $8C, $AD, $7C, $7D, $8C, $D8, $8D, $8C
 
     .byte $00   ; Terminator
 
@@ -815,10 +834,18 @@ EndSeq_WorldFadeIn4:
     ; Terminator
     .byte $00
 
-PRG025_CD82:
-    .byte $28, $F4, $07, $DE, $F4, $EF, $F1, $E3 ; $CD7A - $CD89
-    .byte $5C, $77, $29, $74, $0A, $E8, $EF, $E0, $F8, $F8, $5C, $F1, $E0, $F3, $E3, $2A ; $CD8A - $CD99
-    .byte $5C, $04, $D0, $D1, $D2, $D3, $2A, $7C, $82, $D4, $D6, $00
+PRG025_CD82:  ;[BR] Credits' world names and scenery decorations
+    .byte $28, $F4, $07, $F2, $FA, $F3, $E3, $F4 ; MUNDO 1
+    .byte $5C, $77
+
+    DBYT $2974 ; PAÍS DA
+    .byte 7
+    .byte $F5, $E0, $ED, $F8, $5C, $E3, $E0
+    DBYT $29B5 ; GRAMA
+    .byte 5
+    .byte $E8, $EF, $E0, $F2, $E0
+
+    .byte $2A, $5C, $04, $D0, $D1, $D2, $D3, $2A, $7C, $82, $D4, $D6, $00
 
 PRG025_CDA6:
     .byte $2A, $7F, $85, $D5 ; $CD9A - $CDA9
@@ -834,9 +861,17 @@ PRG025_CDD1:
     .byte $04, $55, $55, $7F, $BB, $2B, $E1, $04, $A5, $A5, $AF, $AB, $00
 
 PRG025_CDE7:
-    .byte $28, $E3, $07 ; $CDDA - $CDE9
-    .byte $DE, $F4, $EF, $F1, $E3, $5C, $78, $29, $24, $06, $E3, $E4, $F8, $E4, $EF, $F9 ; $CDEA - $CDF9
-    .byte $29, $67, $04, $F1, $E0, $F3, $E3, $00
+    .byte $28, $E3, $07 ; MUNDO 2
+    .byte $F2, $FA, $F3, $E3, $F4, $5C, $78
+
+    DBYT $2944 ; DUNAS DO
+    .byte 8
+    .byte $E3, $FA, $F3, $E0, $F8, $5C, $E3, $F4
+    DBYT $2985 ; DESERTO
+    .byte 7
+    .byte $E3, $E4, $F8, $E4, $EF, $F9, $F4
+
+    .byte $00
 
 PRG025_CE02:
     .byte $2A, $65, $01, $58, $2A, $82, $05, $58 ; $CDFA - $CE09
@@ -852,16 +887,20 @@ PRG025_CE2D:
     .byte $55, $2B, $DB, $04, $66, $55, $55, $55, $00
 
 PRG025_CE43:
-    .byte $29, $A2, $05, $DE, $F4, $EF, $F1 ; $CE3A - $CE49
-    .byte $E3, $29, $E4, $01, $79, $2A, $9A, $04, $CA, $CB, $CC, $CD, $00
+    .byte $29, $A2, $05, $F2, $FA, $F3, $E3, $F4 ; MUNDO
+    .byte $29, $E4, $01, $79 ; 3
+
+    .byte $2A, $9A, $04, $CA, $CB, $CC, $CD, $00
 
 PRG025_CE57:
     .byte $2A, $BA, $04 ; $CE4A - $CE59
     .byte $DA, $DB, $DC, $DD, $2A, $DA, $04, $CE, $CF, $5C, $DF, $2A, $FA, $04, $CE, $CF ; $CE5A - $CE69
     .byte $5C, $DF, $00
 
-PRG025_CE6D:
-    .byte $2A, $89, $0A, $DE, $E0, $F9, $E4, $EF, $5C, $F1, $E0, $F3, $E3 ; $CE6A - $CE79
+PRG025_CE6D: ; PAÍS BEIRA-MAR
+    DBYT $2A89
+    .byte 14
+    .byte $F5, $E0, $ED, $F8, $5C, $E1, $E4, $EA, $EF, $E0, $8F, $F2, $E0, $EF
     .byte $00
 
 PRG025_CE7B:
@@ -869,12 +908,17 @@ PRG025_CE7B:
     .byte $E2, $04, $AE, $AF, $AF, $AF, $00
 
 PRG025_CE91:
-    .byte $29, $78, $05, $DE, $F4, $EF, $F1, $E3, $29 ; $CE8A - $CE99
-    .byte $BA, $01, $7A, $00
+    .byte $29, $78, $05, $F2, $FA, $F3, $E3, $F4 ; MUNDO
+    .byte $29, $BA, $01, $7A, $00 ; 4
 
 PRG025_CE9E:
-    .byte $2A, $19, $05, $E8, $EA, $E0, $F3, $F9, $2A, $59, $04, $F1 ; $CE9A - $CEA9
-    .byte $E0, $F3, $E3, $00
+    DBYT $2A17 ; ILHA DE
+    .byte 7
+    .byte $EA, $F1, $E9, $E0, $5C, $E3, $E4
+    DBYT $2A57 ; GIGANTES
+    .byte 8
+    .byte $E8, $EA, $E8, $E0, $F3, $F9, $E4, $F8
+    .byte $00
 
 PRG025_CEAE:
     .byte $2B, $DA, $04, $FF, $FF, $FF, $BB, $00
@@ -884,8 +928,15 @@ PRG025_CEB6:
     .byte $FF, $FF, $BB, $2B, $EA, $04, $AF, $AF, $AF, $AB, $00
 
 PRG025_CEC5:
-    .byte $28, $F6, $07, $DE, $F4 ; $CEBA - $CEC9
-    .byte $EF, $F1, $E3, $5C, $7B, $29, $36, $08, $F8, $F0, $FE, $5C, $F1, $E0, $F3, $E3 ; $CECA - $CED9
+    .byte $28, $B6, $07, $F2, $FA, $F3, $E3, $F4, $5C, $7B ; MUNDO 5
+    
+    DBYT $2916 ; PAÍS
+    .byte 4
+    .byte $F5, $E0, $ED, $F8
+    DBYT $2957 ; CELESTE
+    .byte 7
+    .byte $E2, $E4, $F1, $E4, $F8, $F9, $E4
+
     .byte $28, $D0, $04, $C0, $C1, $C2, $C3, $00
 
 PRG025_CEE2:
@@ -893,16 +944,21 @@ PRG025_CEE2:
     .byte $99, $04, $C0, $C1, $C2, $C3, $29, $B9, $04, $C4, $C5, $C6, $C7, $2A, $F9, $04 ; $CEEA - $CEF9
     .byte $D0, $D1, $D2, $D3, $00
 
-PRG025_CEFF:
-    .byte $28, $F6, $07, $DE, $F4, $EF, $F1, $E3, $5C, $7B, $00 ; $CEFA - $CF09
+PRG025_CEFF: ; Originally a repeat of "WORLD 5"
+    .byte $00 ;
 
 PRG025_CF0A:
     .byte $2B, $D1, $04, $5A, $FA, $FA, $9A, $2B, $D9, $04, $FF, $7F, $5F, $99, $2B, $E1 ; $CF0A - $CF19
     .byte $04, $55, $55, $55, $99, $00
 
 PRG025_CF20:
-    .byte $28, $E3, $07, $DE, $F4, $EF, $F1, $E3, $5C, $7C ; $CF1A - $CF29
-    .byte $2A, $51, $08, $EA, $E2, $E4, $5C, $F1, $E0, $F3, $E3, $2A, $20, $0A, $01, $0D ; $CF2A - $CF39
+    .byte $28, $E3, $07, $F2, $FA, $F3, $E3, $F4, $5C, $7C ; MUNDO 6
+    
+    DBYT $2A4F ; TERRA GLACIAL
+    .byte 13
+    .byte $F9, $E4, $EF, $EF, $E0, $5C, $E8, $F1, $E0, $E2, $EA, $E0, $F1
+
+    .byte $2A, $20, $0A, $01, $0D ; $CF2A - $CF39
     .byte $01, $0D, $01, $0D, $01, $0D, $01, $0D, $00
 
 PRG025_CF43:
@@ -928,9 +984,14 @@ PRG025_CFB2:
     .byte $D3, $04, $EE, $7F, $FF, $FF, $2B, $DB, $04, $EE, $FF, $FF, $FF, $00
 
 PRG025_CFC8:
-    .byte $2A, $43 ; $CFBA - $CFC9
-    .byte $07, $DE, $F4, $EF, $F1, $E3, $5C, $7D, $2A, $84, $09, $F5, $EA, $F5, $E4, $5C ; $CFCA - $CFD9
-    .byte $F1, $E0, $F3, $E3, $29, $9A, $04, $CA, $CB, $CC, $CD, $29, $BA, $04, $DA, $DB ; $CFDA - $CFE9
+    .byte $2A, $43, $07; MUNDO 7
+    .byte $F2, $FA, $F3, $E3, $F4, $5C, $7D
+
+    DBYT $2A84 ; LABIRINTUBOS
+    .byte 12
+    .byte $F1, $E0, $E1, $EA, $EF, $EA, $F3, $F9, $FA, $E1, $F4, $F8
+
+    .byte $29, $9A, $04, $CA, $CB, $CC, $CD, $29, $BA, $04, $DA, $DB ; $CFDA - $CFE9
     .byte $DC, $DD, $00
 
 PRG025_CFED:
@@ -950,12 +1011,21 @@ PRG025_D01F:
     .byte $FF, $FF, $BB, $2B, $D9, $04, $FF, $FF, $FF, $BB, $00
 
 PRG025_D035:
-    .byte $29, $63, $04, $E3, $E0 ; $D02A - $D039
-    .byte $EF, $F0, $29, $A3, $04, $F1, $E0, $F3, $E3, $00
+    DBYT $2923 ; REINO
+    .byte 5
+    .byte $EF, $E4, $EA, $F3, $F4
+    DBYT $2964 ; DO
+    .byte 2
+    .byte $E3, $F4
+    DBYT $29A2 ; BOWSER
+    .byte 6
+    .byte $E1, $F4, $DE, $F8, $E4, $EF
+
+    .byte $00
 
 PRG025_D044:
-    .byte $29, $7A, $05, $DE, $F4, $EF ; $D03A - $D049
-    .byte $F1, $E3, $29, $9C, $01, $7E, $00
+    .byte $29, $5A, $05, $F2, $FA, $F3, $E3, $F4 ; MUNDO
+    .byte $29, $9C, $01, $7E, $00 ; 8
 
 PRG025_D051:
     .byte $2B, $CA, $04, $6A, $5A, $5A, $5A, $00
@@ -1224,6 +1294,16 @@ EndSeq_PrincessChamber:
     .byte $20, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD
     .byte $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD
     .byte $FD
+    ;[BR]
+    DBYT $2B80
+    .byte 32    ; 32 bytes to follow
+    .byte $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC
+    .byte $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC
+
+    DBYT $2BA0
+    .byte 32    ; 32 bytes to follow
+    .byte $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC
+    .byte $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC, $FD, $FD, $FC, $FC
 
     ; Terminator
     .byte $00

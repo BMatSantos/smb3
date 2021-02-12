@@ -192,42 +192,43 @@ PRG024_A119:
     RTS      ; Return
 
     ; English: "Oh,it's terrible!" / "The King has been" / "transformed!" / "Please find the" / "Magic Wand so we can" / "change him back"
+    ; [BR]
 KingHelpMsg1:
-    ;       O    h    ,    i    t    '    s         t    e    r    r    i    b    l    e    !
-    .byte $BE, $D7, $9A, $D8, $CD, $AB, $CC, $FE, $CD, $D4, $CB, $CB, $D8, $D1, $DB, $D4, $EA, $FE, $FE, $FE
+    ;       Q    u    e         t    e    r    r    í    v    e    l    !
+    .byte $C0, $CE, $D4, $FE, $CD, $D4, $CB, $CB, $C8, $CF, $D4, $DB, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
-    ;       T    h    e         K    i    n    g         h    a    s         b    e    e    n
-    .byte $C3, $D7, $D4, $FE, $BA, $D8, $DD, $D6, $FE, $D7, $D0, $CC, $FE, $D1, $D4, $D4, $DD, $FE, $FE, $FE
+    ;       T    r    a    n    s    f    o    r    m    a    r    a    m         o         r    e    i    !
+    .byte $C3, $CB, $D0, $DD, $CC, $D5, $DE, $CB, $DC, $D0, $CB, $D0, $DC, $FE, $DE, $FE, $CB, $D4, $D8, $EA
 
-    ;       t    r    a    n    s    f    o    r    m    e    d    !
-    .byte $CD, $CB, $D0, $DD, $CC, $D5, $DE, $CB, $DC, $D4, $D3, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       P    o    r         f    a    v    o    r    ,         r    e    c    u    p    e    r    e
+    .byte $BF, $DE, $CB, $FE, $D5, $D0, $CF, $DE, $CB, $9A, $FE, $CB, $D4, $D2, $CE, $DF, $D4, $CB, $D4, $FE
 
-    ;       P    l    e    a    s    e         f    i    n    d         t    h    e
-    .byte $BF, $DB, $D4, $D0, $CC, $D4, $FE, $D5, $D8, $DD, $D3, $FE, $CD, $D7, $D4, $FE, $FE, $FE, $FE, $FE
+    ;       a         V    a    r    i    n    h    a         M    á    g    i    c    a    .
+    .byte $D0, $FE, $C5, $D0, $CB, $D8, $DD, $D7, $D0, $FE, $BC, $C6, $D6, $D8, $D2, $D0, $E9, $FE, $FE, $FE
 
-    ;       M    a    g    i    c         W    a    n    d         s    o         w    e         c    a    n
-    .byte $BC, $D0, $D6, $D8, $D2, $FE, $C6, $D0, $DD, $D3, $FE, $CC, $DE, $FE, $81, $D4, $FE, $D2, $D0, $DD
+    ;       S    ó         a    s    s    i    m         e    l    e         v    o    l    t    a    r    á
+    .byte $C2, $C9, $FE, $D0, $CC, $CC, $D8, $DC, $FE, $D4, $DB, $D4, $FE, $CF, $DE, $DB, $CD, $D0, $CB, $C6
 
-    ;       c    h    a    n    g    e         h    i    m         b    a    c    k    .
-    .byte $D2, $D7, $D0, $DD, $D6, $D4, $FE, $D7, $D8, $DC, $FE, $D1, $D0, $D2, $DA, $E9, $FE, $FE, $FE, $FE
+    ;       a    o         n    o    r    m    a    l    !
+    .byte $D0, $DE, $FE, $DD, $DE, $CB, $DC, $D0, $DB, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
     ; English: "Hurry! Hurry!" / "Get the Magic Wand" / "back from Little" / "Koopa."
 KingHelpMsg2:
-    ;       H    u    r    r    y    !         H    u    r    r    y    !
-    .byte $B7, $CE, $CB, $CB, $8C, $EA, $FE, $B7, $CE, $CB, $CB, $8C, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       R    á    p    i    d    o    !         R    á    p    i    d    o    !
+    .byte $C1, $C6, $DF, $D8, $D3, $DE, $EA, $FE, $C1, $C6, $DF, $D8, $D3, $DE, $EA, $FE, $FE, $FE, $FE, $FE
 
-    ;       G    e    t         t    h    e         M    a    g    i    c         W    a    n    d
-    .byte $B6, $D4, $CD, $FE, $CD, $D7, $D4, $FE, $BC, $D0, $D6, $D8, $D2, $FE, $C6, $D0, $DD, $D3, $FE, $FE
+    ;       P    e    g    u    e         a         v    a    r    i    n    h    a
+    .byte $BF, $D4, $D6, $CE, $D4, $FE, $D0, $FE, $CF, $D0, $CB, $D8, $DD, $D7, $D0, $FE, $FE, $FE, $FE, $FE
 
-    ;       b    a    c    k         f    r    o    m         L    i    t    t    l    e
-    .byte $D1, $D0, $D2, $DA, $FE, $D5, $CB, $DE, $DC, $FE, $BB, $D8, $CD, $CD, $DB, $D4, $FE, $FE, $FE, $FE
+    ;       d    a    q    u    e    l    e         K    a    p    a    n    g    a
+    .byte $D3, $D0, $CA, $CE, $D4, $DB, $D4, $FE, $BA, $D0, $DF, $D0, $DD, $D6, $D0, $FE, $FE, $FE, $FE, $FE
 
-    ;       K    o    o    p    a    .
-    .byte $BA, $DE, $DE, $DF, $D0, $E9, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    ;       K    o    o    p    a         e         t    r    a    g    a         e    l    a
+    .byte $BA, $DE, $DE, $DF, $D0, $FE, $D4, $FE, $CD, $CB, $D0, $D6, $D0, $FE, $D4, $DB, $D0, $FE, $FE, $FE
 
-    ;
-    .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
-
+    ;       d    e         v    o    l    t    a    !
+    .byte $D3, $D4, $FE, $CF, $DE, $DB, $CD, $D0, $EA, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
+    
     ;
     .byte $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE, $FE
 
@@ -5396,25 +5397,26 @@ PRG024_BAC8:
     RTS      ; Return
 
     ; English: "Thank you. But" / "our Princess is" / "in another" / "castle!...Just" / "kidding! Ha ha" / "ha! Bye bye."
+    ; [BR]
 EndText:
 
-    ;       T    h    a    n    k         y    o    u    .         B    u    t
-    .byte $C3, $D7, $D0, $DD, $DA, $FE, $8C, $DE, $CE, $E9, $FE, $B1, $CE, $CD, $FE
+    ;       O    b    r    i    g    a    d    a    !         A         p    a    z
+    .byte $BE, $D1, $CB, $D8, $D6, $D0, $D3, $D0, $EA, $FE, $B0, $FE, $DF, $D0, $8F
 
-    ;       o    u    r         P    r    i    n    c    e    s    s         i    s
-    .byte $DE, $CE, $CB, $FE, $BF, $CB, $D8, $DD, $D2, $D4, $CC, $CC, $FE, $D8, $CC
+    ;       e    n    f    i    m         r    e    t    o    r    n    o    u     
+    .byte $D4, $DD, $D5, $D8, $DC, $FE, $CB, $D4, $CD, $DE, $CB, $DD, $DE, $CE, $FE
 
-    ;       i    n         a    n    o    t    h    e    r
-    .byte $D8, $DD, $FE, $D0, $DD, $DE, $CD, $D7, $D4, $CB, $FE, $FE, $FE, $FE, $FE
+    ;       a    o         n    o    s    s    o         M    u    n    d    o
+    .byte $D0, $DE, $FE, $DD, $DE, $CC, $CC, $DE, $FE, $BC, $CE, $DD, $D3, $DE, $FE
 
-    ;       c    a    s    t    l    e    !    .    .    .    J    u    s    t
-    .byte $D2, $D0, $CC, $CD, $DB, $D4, $EA, $E9, $E9, $E9, $B9, $CE, $CC, $CD, $FE
+    ;       C    o    g    u    m    e    l    o    .
+    .byte $B2, $DE, $D6, $CE, $DC, $D4, $DB, $DE, $E9, $FE, $FE, $FE, $FE, $FE, $FE
 
-    ;       k    i    d    d    i    n    g    !         H    a         h    a
-    .byte $DA, $D8, $D3, $D3, $D8, $DD, $D6, $EA, $FE, $B7, $D0, $FE, $D7, $D0, $FE
+    ;                      -    -    -    -    -    -    -    -    -
+    .byte $FE, $FE, $FE, $E5, $E5, $E5, $E5, $E5, $E5, $E5, $E5, $E5, $FE, $FE, $FE
 
-    ;       h    a    !         B    y    e         b    y    e    .
-    .byte $D7, $D0, $EA, $FE, $B1, $8C, $D4, $FE, $D1, $8C, $D4, $E9, $FE, $FE, $FE
+    ;                      E              f         i         m    !
+    .byte $FE, $FE, $FE, $B4, $FE, $FE, $D5, $FE, $D8, $FE, $DC, $EA, $FE, $FE, $FE
 
 PRG024_BB23:
     ; Terminator

@@ -54,13 +54,13 @@ Video_DoWXMario00:
     DBYT $29F7
     .byte $01, $E5
 
-    ; ----
+    ; ---- [BR]
 
     DBYT $294C
-    .byte $05, $D8, $F0, $E9, $EC, $EE  ; WORLD
+    .byte $05, $BA, $DA, $DB, $EE, $D8  ; MUNDO
 
     DBYT $29AA
-    .byte $05, $BA, $BC, $E9, $FC, $F0  ; MARIO
+    .byte $05, $BA, $BC, $E9, $FC, $D8  ; MARIO
 
     DBYT $29B3
     .byte $01, $FB
@@ -141,16 +141,16 @@ Video_DoWXMario80:
     DBYT $29E7
     .byte $01, $E5
 
-    ; ----
+    ; ---- [BR]
 
     DBYT $295C
-    .byte $04, $D8, $F0, $E9, $EC   ; WORL
+    .byte $04, $BA, $DA, $DB, $EE   ; MUND
 
     DBYT $2940
-    .byte $01, $EE          ; D
+    .byte $01, $D8          ; O
 
     DBYT $29BA
-    .byte $05, $BA, $BC, $E9, $FC, $F0 ; MARIO
+    .byte $05, $BA, $BC, $E9, $FC, $D8 ; MARIO
 
     DBYT $29A3
     .byte $01, $FB
@@ -212,16 +212,19 @@ Video_DoGameOver00:
     DBYT $29F7
     .byte $01, $E5
 
-    ; ----
+    ; ---- [BR]
 
     DBYT $296B
-    .byte $0A, $EB, $BC, $BA, $E8, $FE, $F0, $6A, $E8, $E9, $6B ; GAME OVER!
+    .byte 11
+    .byte $66, $FC, $BA, $FE, $EE, $E8, $FE, $67, $D8, $EB, $D8 ; FIM DE JOGO
 
-    DBYT $29AF
-    .byte $08, $ED, $F0, $DB, $EA, $FC, $DB, $DA, $E8   ; CONTINUE
+    DBYT $29AE
+    .byte 9
+    .byte $ED, $D8, $DB, $EA, $FC, $DB, $DA, $BC, $E9   ; CONTINUAR
 
-    DBYT $29CF
-    .byte $03, $E8, $DB, $EE    ; END
+    DBYT $29CE
+    .byte 4
+    .byte $65, $BC, $FC, $E9    ; SAIR
 
     ; ----
 
@@ -301,25 +304,25 @@ Video_DoGameOver80:
     DBYT $29E7
     .byte $01, $E5
 
-    ; ----
+    ; ---- [BR]
 
     DBYT $297B
-    .byte $04, $EB, $BC, $BA, $E8       ; GAME
+    .byte $05, $66, $FC, $BA, $FE, $EE       ; FIM D
 
     DBYT $2960
-    .byte $05, $F0, $6A, $E8, $E9, $6B  ; OVER!
+    .byte $06, $E8, $FE, $67, $D8, $EB, $D8  ; E JOGO
 
     DBYT $29A0
-    .byte $07, $F0, $DB, $EA, $FC, $DB, $DA, $E8
+    .byte $07, $DB, $EA, $FC, $DB, $DA, $BC, $E9 ; NTINUAR
 
-    DBYT $29BF
-    .byte $01, $ED
+    DBYT $29BE
+    .byte $02, $ED, $D8 ; CO
 
     DBYT $29C0
-    .byte $02, $DB, $EE ; ND
+    .byte $02, $FC, $E9 ; IR
 
-    DBYT $29DF
-    .byte $01, $E8  ; E
+    DBYT $29DE
+    .byte $02, $65, $BC  ; SA
 
     ; ----
 
@@ -334,7 +337,7 @@ Video_DoGameOver80:
 
     .byte $00
 
-Video_DoW2WZ:   ; "WELCOME TO WARP ZONE" banner
+Video_DoW2WZ:   ; [BR] "WELCOME TO WARP ZONE" banner
     DBYT $2884
     .byte VU_VERT | $04, $A0, $E6, $E6, $E3
 
@@ -344,11 +347,13 @@ Video_DoW2WZ:   ; "WELCOME TO WARP ZONE" banner
     DBYT $289B
     .byte VU_VERT | $04, $A2, $E7, $E7, $E5
 
-    DBYT $28A5 ;W    E    L    C    O    M    E         T    O         W    A    R    P         Z    O    N    E
-    .byte 22, $FE, $D8, $E8, $EC, $ED, $F0, $BA, $E8, $FE, $EA, $F0, $FE, $D8, $BC, $E9, $D9, $FE, $FD, $F0, $DB, $E8, $FE
+    DBYT $28A5
+    .byte 22    ;               B    O    A    S    -    V    I    N    D    A    S         A    O               
+    .byte $FE, $FE, $FE, $FE, $64, $D8, $BC, $65, $6B, $6A, $FC, $DB, $EE, $BC, $65, $FE, $BC, $D8, $FE, $FE, $FE, $FE
 
     DBYT $28C5
-    .byte VU_REPEAT | 22, $FE
+    .byte 22    ;          M    U    N    D    O         T    R    A    N    S    P    O    R    T    E          
+    .byte $FE, $FE, $FE, $BA, $DA, $DB, $EE, $D8, $FE, $EA, $E9, $BC, $DB, $65, $D9, $D8, $E9, $EA, $E8, $FE, $FE, $FE
 
     DBYT $28E5
     .byte VU_REPEAT | 22, $E4
@@ -401,8 +406,9 @@ Video_DoWXLuigi00:
     DBYT $29F7
     .byte $01, $E5
 
+    ;[BR]
     DBYT $294C
-    .byte $05, $D8, $F0, $E9, $EC, $EE  ; WORLD
+    .byte $05, $BA, $DA, $DB, $EE, $D8  ; MUNDO
 
     DBYT $29AA
     .byte $05, $EC, $DA, $FC, $EB, $FC  ; LUIGI
@@ -485,11 +491,12 @@ Video_DoWXLuigi80:
     DBYT $29E7
     .byte $01, $E5
 
+    ;[BR]
     DBYT $295C
-    .byte $04, $D8, $F0, $E9, $EC   ; WORL
+    .byte $04, $BA, $DA, $DB, $EE   ; MUND
 
     DBYT $2940
-    .byte $01, $EE          ; D
+    .byte $01, $D8          ; O
 
     DBYT $29BA
     .byte $05, $EC, $DA, $FC, $EB, $FC  ; LUIGI
@@ -582,7 +589,7 @@ PRG010_C303:
 ; it directly sets the graphics buffer, not inserts.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 GameOver_MLName:
-    .byte $BA, $BC, $E9, $FC, $F0, $00  ; MARIO[Terminator]
+    .byte $BA, $BC, $E9, $FC, $D8, $00  ; MARIO[Terminator]
     .byte $EC, $DA, $FC, $EB, $FC, $00  ; LUIGI[Terminator]
 GameOver_MLName_Len = 6
 
@@ -891,7 +898,7 @@ PRG010_C488:
 
     LDA Map_Objects_IDs,Y
     CMP #MAPOBJ_CANOE
-    BGE PRG010_C4A9     ; If object ID >= MAPOBJ_CANOE, jump to PRG010_C4A9
+    BEQ PRG010_C4A9     ; If object ID [BR]= MAPOBJ_CANOE, jump to PRG010_C4A9
 
     ; All other objects get a random number of 0-3 assigned to their "data" field
     LDA RandomN,Y
